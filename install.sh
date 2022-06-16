@@ -22,8 +22,7 @@ create_symlinks
 echo "SO packages"
 sudo apt-get install fonts-powerline -y
 
-echo "Initializing conda for zsh."
-conda init zsh
+echo "Initializing zsh."
 ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
 echo "Setting up the Spaceship theme."

@@ -19,11 +19,23 @@ create_symlinks() {
 
 create_symlinks
 
+echo "SO packages"
+sudo apt-get install powerline fonts-powerline -y
+
 echo "Initializing conda for zsh."
 conda init zsh
+ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
 echo "Setting up the Spaceship theme."
-sudo apt-get install powerline fonts-powerline -y
-ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
+
+echo "Node.js packages"
+sudo npm i -g n ni
+
+echo "Node.js configuration"
+sudo n 16

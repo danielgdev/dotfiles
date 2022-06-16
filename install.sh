@@ -37,3 +37,6 @@ git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 
 echo "Additional packages for node.js"
 sudo npm i -g n ni pnpm
+
+echo "Node.js version"
+sudo n 16

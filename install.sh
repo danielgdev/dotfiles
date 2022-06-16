@@ -35,7 +35,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 
 echo "Node.js packages"
-sudo npm i -g n ni
+sudo npm i -g n @antfu/ni pnpm
 
 echo "Node.js configuration"
 sudo n 16

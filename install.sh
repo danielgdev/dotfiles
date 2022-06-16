@@ -20,7 +20,7 @@ create_symlinks() {
 create_symlinks
 
 echo "SO packages"
-sudo apt-get install powerline fonts-powerline -y
+sudo apt-get install fonts-powerline -y
 
 echo "Initializing conda for zsh."
 conda init zsh
